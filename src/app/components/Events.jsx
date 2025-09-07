@@ -1,0 +1,181 @@
+"use client";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+
+const events = [
+  {
+    title: "DIALECTIQUE – Debate Competition",
+    image: "/dialectique -01.jpg",
+    registerLink: "https://rb.gy/mv03yk",
+    description: `Dialectique is a dynamic debate competition consisting of two rounds. 
+    Teams of two members (same institution) debate in either Hindi or English. 
+    Preliminary round requires video submissions; finalists compete on campus with 
+    speeches and rebuttals, judged on content, clarity, and delivery.`,
+  },
+  {
+    title: "UNPLUGGED UNISON – Open Mic",
+    image: "/Open Mic-01.jpg",
+    registerLink: "https://rb.gy/rebk9t",
+    description: `Unplugged Unison is an open-mic platform for poetry, music, stand-up, 
+    storytelling, and more. Participants perform original content that respects all 
+    sentiments. Selected entries from the preliminary video round perform live on 
+    campus.`,
+  },
+    {
+    title: "MOOT COURT",
+    image: "/Moot Court-01.jpg",
+    registerLink: "https://rb.gy/rebk9t",
+    description: ` Moot court is a simulated court proceeding where students argue cases,
+    often based on hypothetical legal issues or real-life cases that have already been
+    decided. It allows students to practice their legal research, writing, 
+     and oral advocacy skills in a courtroom setting.`,
+  }, 
+   {
+    title: "MOC IAS",
+    image: "/MOCK IAS-01.jpg",
+    registerLink: "https://rb.gy/rebk9t",
+    description: `Join the simulation of highly competive civil services
+    examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event
+     is designed to help students prepare for the real IAS exam by providing them with 
+     a similar experience of the actual test conditions. It is typically structured to mimic 
+     the format, pressure,and content of the original exam.`
+  },
+];
+
+export default function EventsSection() {
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <section
+      id="events"
+      className="relative bg-black text-white py-20 px-6 overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-black pointer-events-none"></div>
+
+      <motion.div
+        className="max-w-6xl mx-auto text-center relative z-10"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.h2
+          className="font-bold text-4xl md:text-5xl mb-12 text-purple-400"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          Our Events
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">
+          {events.map((e, idx) => (
+            <motion.div
+              key={idx}
+              variants={item}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 15px 35px rgba(139, 92, 246, 0.4)",
+              }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="
+                bg-gradient-to-br from-purple-800/30 to-purple-900/10
+                border border-purple-700/30 rounded-xl
+                shadow-lg backdrop-blur-sm
+                overflow-hidden
+                flex flex-col
+              "
+            >
+              {e.image && (
+                <img
+                  src={e.image}
+                  alt={e.title}
+                  className="w-full h-60 object-cover"
+                />
+              )}
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <h3 className="text-xl font-semibold text-purple-300 mb-4">
+                  {e.title}
+                </h3>
+                <div className="flex gap-4 justify-center mt-auto">
+                  <a
+                    href={e.registerLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-lg bg-purple-500 hover:bg-purple-400 text-white font-medium transition"
+                  >
+                    Register
+                  </a>
+                  <button
+                    onClick={() => setSelectedEvent(e)}
+                    className="px-4 py-2 rounded-lg bg-purple-700 hover:bg-purple-600 text-white font-medium transition"
+                  >
+                    Details
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Details Modal */}
+      <AnimatePresence>
+        {selectedEvent && (
+          <motion.div
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedEvent(null)}
+          >
+            <motion.div
+              className="bg-black rounded-2xl overflow-hidden shadow-2xl max-w-lg w-full border border-purple-700/30"
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {selectedEvent.image && (
+                <img
+                  src={selectedEvent.image}
+                  alt={selectedEvent.title}
+                  className="w-full h-72 object-cover"
+                />
+              )}
+              <div className="p-6 text-left">
+                <h2 className="text-2xl font-bold text-purple-400">
+                  {selectedEvent.title}
+                </h2>
+                <p className="mt-4 text-purple-100 leading-relaxed">
+                  {selectedEvent.description}
+                </p>
+              </div>
+              <div className="p-4 border-t border-purple-700/30 text-right">
+                <button
+                  onClick={() => setSelectedEvent(null)}
+                  className="px-4 py-2 rounded-lg bg-purple-500 hover:bg-purple-400 text-white font-medium transition"
+                >
+                  Close
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
+  );
+}
