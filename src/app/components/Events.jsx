@@ -51,8 +51,8 @@ const events = [
      the format, pressure,and content of the original exam.`,
   },
   {
-    title: "ESCAPE ROOM",
-    image: "/MOCK IAS-01.jpg",
+    title: "THE QUILL QUEST",
+    image: "/Quiz-01.jpg",
     registerLink: "https://forms.gle/d9zXrRzUVpfH8KuP8",
     description: `Join the simulation of highly competive civil services
     examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event

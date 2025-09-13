@@ -74,29 +74,12 @@ export default function About() {
                 className="w-28 h-28 mx-auto rounded-full mb-4 border-2 border-purple-400 object-cover"
               />
               <h4 className="text-xl font-semibold text-purple-200">
-                Gesu Thakur
+                Dr. Gesu Thakur
               </h4>
               <p className="text-purple-300 text-sm mb-3">Convener</p>
-              <div className="flex justify-center space-x-4 text-purple-300">
-                <a
-                  href="mailto:vandanabhakuni06@gmail.com"
-                  className="hover:text-purple-100 transition"
-                >
-                  <i className="fas fa-envelope text-lg"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/vandana-bhakuni-16b2ba271/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-purple-100 transition"
-                >
-                  <i className="fab fa-linkedin text-lg"></i>
-                </a>
-              </div>
             </div>
           </div>
 
-          {/* Coordinators row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mb-8">
             <div></div>
             <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
@@ -139,13 +122,13 @@ export default function About() {
               <p className="text-purple-300 text-sm mb-3">Co-Coordinator</p>
               <div className="flex justify-center space-x-4 text-purple-300">
                 <a
-                  href="mailto:vandanabhakuni06@gmail.com"
+                  href="mailto:abhinandansharma2468@gmail.com"
                   className="hover:text-purple-100 transition"
                 >
                   <i className="fas fa-envelope text-lg"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/vandana-bhakuni-16b2ba271/"
+                  href="https://www.linkedin.com/in/abhinandan-sharma-1011b5258/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-100 transition"
@@ -157,7 +140,6 @@ export default function About() {
             <div></div>
           </div>
 
-          {/* Second row — responsive 3 → 1 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
               <img
@@ -173,13 +155,13 @@ export default function About() {
               </p>
               <div className="flex justify-center space-x-4 text-purple-300">
                 <a
-                  href="mailto:vandanabhakuni06@gmail.com"
+                  href="mailto:jainankurvansh@gmail.com"
                   className="hover:text-purple-100 transition"
                 >
                   <i className="fas fa-envelope text-lg"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/vandana-bhakuni-16b2ba271/"
+                  href="https://www.linkedin.com/in/vansh-jain-89501825a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-100 transition"
@@ -203,13 +185,13 @@ export default function About() {
               </p>
               <div className="flex justify-center space-x-4 text-purple-300">
                 <a
-                  href="mailto:vandanabhakuni06@gmail.com"
+                  href="mailto:awayontech@gmail.com"
                   className="hover:text-purple-100 transition"
                 >
                   <i className="fas fa-envelope text-lg"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/vandana-bhakuni-16b2ba271/"
+                  href="https://www.linkedin.com/in/shourya-gupta-8a8876250/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-100 transition"
@@ -221,7 +203,7 @@ export default function About() {
 
             <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
               <img
-                src="/WhatsApp Image 2025-09-08 at 00.46.16_67653274.jpg"
+                src="/PradumaySir.jpg"
                 alt="Fest Coordinator"
                 className="w-28 h-28 mx-auto rounded-full mb-4 border-2 border-purple-400 object-cover"
               />
@@ -231,7 +213,7 @@ export default function About() {
               <p className="text-purple-300 text-sm mb-3">Fest Coordinator</p>
               <div className="flex justify-center space-x-4 text-purple-300">
                 <a
-                  href="mailto:vandanabhakuni06@gmail.com"
+                  href="mailto:pradhumaygaur@myyahoo.com"
                   className="hover:text-purple-100 transition"
                 >
                   <i className="fas fa-envelope text-lg"></i>
@@ -255,7 +237,7 @@ export default function About() {
           transition={{ duration: 0.8, delay: 0.7 }}
         >
           <h3 className="text-4xl md:text-5xl font-bold text-purple-400 text-center hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-100">
-            EXPRESSIONS 2025
+            EXPRESSIONS 2K25 2.0
           </h3>
           <p>
             <span className="text-purple-300 font-semibold">Expressions</span>{" "}

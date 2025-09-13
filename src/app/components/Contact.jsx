@@ -5,7 +5,11 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   const icons = [
-    { href: "mailto:committee@example.com", icon: <FaEnvelope />, label: "Email" },
+    {
+      href: "mailto:thelinguisticcommittee@gmail.com",
+      icon: <FaEnvelope />,
+      label: "Email",
+    },
     {
       href: "https://www.linkedin.com/in/the-linguistic-committee-367063179/",
       icon: <FaLinkedin />,
@@ -13,7 +17,7 @@ export default function Contact() {
       external: true,
     },
     {
-      href: "https://instagram.com/yourcommittee",
+      href: "https://www.instagram.com/coerlinguists?igsh=MTlvYWt1d3ZucmN4ZQ==",
       icon: <FaInstagram />,
       label: "Instagram",
       external: true,
