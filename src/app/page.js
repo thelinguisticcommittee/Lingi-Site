@@ -11,11 +11,11 @@ export default function Home() {
     <>
       <Navbar />
       <main className="scroll-smooth">
+        <Hero />
         <About />
         <Events />
         <Sponsors />
         <Brochure />
-         <Hero />
         <Contact />
       </main>
       <Footer />

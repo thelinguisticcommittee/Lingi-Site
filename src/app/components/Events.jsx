@@ -6,7 +6,7 @@ const events = [
   {
     title: "DIALECTIQUE – Debate Competition",
     image: "/dialectique -01.jpg",
-    registerLink: "https://rb.gy/mv03yk",
+    registerLink: "https://forms.gle/jyMpxWJexQkCvnQn8",
     description: `Dialectique is a dynamic debate competition consisting of two rounds. 
     Teams of two members (same institution) debate in either Hindi or English. 
     Preliminary round requires video submissions; finalists compete on campus with 
@@ -15,30 +15,50 @@ const events = [
   {
     title: "UNPLUGGED UNISON – Open Mic",
     image: "/Open Mic-01.jpg",
-    registerLink: "https://rb.gy/rebk9t",
+    registerLink: "https://forms.gle/U42d2K6uvXaxKeuW9",
     description: `Unplugged Unison is an open-mic platform for poetry, music, stand-up, 
     storytelling, and more. Participants perform original content that respects all 
     sentiments. Selected entries from the preliminary video round perform live on 
     campus.`,
   },
-    {
+  {
     title: "MOOT COURT",
     image: "/Moot Court-01.jpg",
-    registerLink: "https://rb.gy/rebk9t",
+    registerLink: "https://forms.gle/4e764S183m7cvagf8",
     description: ` Moot court is a simulated court proceeding where students argue cases,
     often based on hypothetical legal issues or real-life cases that have already been
     decided. It allows students to practice their legal research, writing, 
      and oral advocacy skills in a courtroom setting.`,
-  }, 
-   {
+  },
+  {
     title: "MOC IAS",
     image: "/MOCK IAS-01.jpg",
-    registerLink: "https://rb.gy/rebk9t",
+    registerLink: "https://forms.gle/SG2vcpNNjNeKrKQq6",
     description: `Join the simulation of highly competive civil services
     examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event
      is designed to help students prepare for the real IAS exam by providing them with 
      a similar experience of the actual test conditions. It is typically structured to mimic 
-     the format, pressure,and content of the original exam.`
+     the format, pressure,and content of the original exam.`,
+  },
+  {
+    title: "FILM REVIEW ",
+    image: "/MOCK IAS-01.jpg",
+    registerLink: "https://forms.gle/wKTLYedjyU9RRge17",
+    description: `Join the simulation of highly competive civil services
+    examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event
+     is designed to help students prepare for the real IAS exam by providing them with 
+     a similar experience of the actual test conditions. It is typically structured to mimic 
+     the format, pressure,and content of the original exam.`,
+  },
+  {
+    title: "ESCAPE ROOM",
+    image: "/MOCK IAS-01.jpg",
+    registerLink: "https://forms.gle/d9zXrRzUVpfH8KuP8",
+    description: `Join the simulation of highly competive civil services
+    examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event
+     is designed to help students prepare for the real IAS exam by providing them with 
+     a similar experience of the actual test conditions. It is typically structured to mimic 
+     the format, pressure,and content of the original exam.`,
   },
 ];
 
@@ -66,19 +86,19 @@ export default function EventsSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-black pointer-events-none"></div>
 
       <motion.div
-        className="max-w-6xl mx-auto text-center relative z-10"
+        className="max-w-6xl mx-auto text-center relative z-10 "
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
         <motion.h2
-          className="font-bold text-4xl md:text-5xl mb-12 text-purple-400"
+          className="font-bold text-4xl md:text-5xl mb-12 text-purple-400 hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-120"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          Our Events
+          OUR EVENTS
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">

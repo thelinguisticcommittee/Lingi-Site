@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -14,15 +14,23 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
+  // Enable smooth scroll globally
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.style.scrollBehavior = "smooth";
+    }
+  }, []);
+
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo / Brand */}
-        <Link
-          href="#home"
-          className="font-bold text-2xl tracking-wide text-white hover:text-purple-400 transition-colors"
-        >
-          Committee
+        <Link href="#home" className="flex items-center space-x-2">
+          <img
+            src="/lingi logo new white.png" // <-- Replace with your logo path
+            alt="Logo"
+            className="h-10 w-auto object-contain mask-circle"
+          />
         </Link>
 
         {/* Desktop Links */}

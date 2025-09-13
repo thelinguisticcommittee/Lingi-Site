@@ -1,15 +1,15 @@
 "use client";
-import { FaFacebook, FaInstagram, FaEnvelope, FaPhone } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaEnvelope, FaPhone , FaLinkedin} from "react-icons/fa";
+
 import { motion } from "framer-motion";
 
 export default function Contact() {
   const icons = [
     { href: "mailto:committee@example.com", icon: <FaEnvelope />, label: "Email" },
-    { href: "tel:+911234567890", icon: <FaPhone />, label: "Phone" },
     {
-      href: "https://facebook.com/yourcommittee",
-      icon: <FaFacebook />,
-      label: "Facebook",
+      href: "https://www.linkedin.com/in/the-linguistic-committee-367063179/",
+      icon: <FaLinkedin />,
+      label: "Linkedin",
       external: true,
     },
     {
