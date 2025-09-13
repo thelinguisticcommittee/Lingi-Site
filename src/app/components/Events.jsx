@@ -93,7 +93,7 @@ export default function EventsSection() {
         viewport={{ once: true }}
       >
         <motion.h2
-          className="font-bold text-4xl md:text-5xl mb-12 text-purple-400 hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-120"
+          className="font-bold text-4xl md:text-5xl mb-12 text-purple-400"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -101,7 +101,7 @@ export default function EventsSection() {
           OUR EVENTS
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center">
           {events.map((e, idx) => (
             <motion.div
               key={idx}

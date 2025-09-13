@@ -236,7 +236,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          <h3 className="text-4xl md:text-5xl font-bold text-purple-400 text-center hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-100">
+          <h3 className="text-4xl md:text-5xl font-bold text-purple-400 text-center ">
             EXPRESSIONS 2K25 2.0
           </h3>
           <p>
