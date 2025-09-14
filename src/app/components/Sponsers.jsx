@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaPhone } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const sponsors = [
@@ -28,11 +28,13 @@ const contacts = [
     name: "Shourya Gupta",
     linkedin: "https://www.linkedin.com/in/shourya-gupta-8a8876250",
     email: "mailto:gshourya665@gmail.com",
+    phone: "+917820095590",
   },
   {
     name: "Pradhumay Gaur",
     linkedin: "https://www.linkedin.com/in/pradhumay-gaur/",
     email: "mailto:pradhumay@example.com",
+    phone: "+919760704988",
   },
 ];
 
@@ -94,10 +96,7 @@ Your support helps us scale the fest, attract top talent and create memorable ex
           life.
         </p>
 
-        {/* Grid Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch lg:h-[560px]">
-          {/* Typing Text */}
-
           <div className="h-full rounded-2xl border border-purple-500/30 p-10 bg-gradient-to-br from-purple-300/10 to-pink-300/10 backdrop-blur-md shadow-xl flex flex-col items-center justify-center text-center transition transform hover:scale-[1.02] hover:shadow-purple-500/30 hover:shadow-2xl">
             <motion.h2 className="font-extrabold text-2xl md:text-6xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-200 drop-shadow-lg tracking-tight">
               {heading}
@@ -110,7 +109,6 @@ Your support helps us scale the fest, attract top talent and create memorable ex
             />
           </div>
 
-          {/* Video Box */}
           <div className="h-full flex items-center justify-center">
             <div className="relative h-full aspect-[9/16] max-w-[340px] w-full rounded-3xl border-[10px] border-purple-500/30 shadow-2xl overflow-hidden bg-black">
               <video
@@ -131,7 +129,7 @@ Your support helps us scale the fest, attract top talent and create memorable ex
           <motion.div
             className="flex gap-12 py-4"
             animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
           >
             {[...sponsors, ...sponsors].map((s, idx) => (
               <img
@@ -155,16 +153,18 @@ Your support helps us scale the fest, attract top talent and create memorable ex
             Want to promote your brand?
           </h3>
           <p className="text-purple-100 mb-6">Reach out to:</p>
+
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             {contacts.map((c, i) => (
               <div
                 key={i}
                 className="bg-black/40 p-4 rounded-lg border border-purple-700/40 w-full sm:w-1/2"
               >
-                <p className=" text-lg text-purple-200 mb-3 font-bold hover:text-purple-600">
+                <p className="text-lg text-purple-200 mb-3 font-bold hover:text-purple-600">
                   {c.name}
                 </p>
-                <div className="flex justify-center gap-6 text-3xl text-purple-400">
+
+                <div className="flex justify-center gap-6 text-2xl text-purple-400">
                   <a
                     href={c.linkedin}
                     target="_blank"
@@ -174,10 +174,16 @@ Your support helps us scale the fest, attract top talent and create memorable ex
                     <FaLinkedin />
                   </a>
                   <a
-                    href={c.email}
+                    href={`mailto:${c.email}`}
                     className="hover:text-purple-200 transition-colors"
                   >
                     <FaEnvelope />
+                  </a>
+                  <a
+                    href={`tel:${c.phone}`}
+                    className="hover:text-purple-200 transition-colors"
+                  >
+                    <FaPhone />
                   </a>
                 </div>
               </div>

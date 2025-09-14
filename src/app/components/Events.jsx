@@ -28,10 +28,9 @@ const events = [
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879348/BRAIN_BRAWL-01-01_o3azgj.jpg",
     registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
-    description: `Moot court is a simulated court proceeding where students argue cases,
-    often based on hypothetical legal issues or real-life cases that have already been
-    decided. It allows students to practice their legal research, writing, 
-     and oral advocacy skills in a courtroom setting.`,
+    description: `Join Brain Brawl  and test your knowledge, speed, and teamwork!
+Teams of up to two members will first compete in a written screening round. The top scorers move on to an exciting panel round with rapid-fire, audio-visual, and buzzer challenges. No phones or external help allowed; answers must be within the time limit.
+Think fast, score high, and claim the title of quiz champions!`,
   },
   {
     title: "MOCK IAS",
@@ -49,11 +48,7 @@ const events = [
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879304/Quill_quest_rectangle-01_yy5wzd.jpg",
     registerLink: "https://forms.gle/AhcPi2ePGmBdFxcp7",
-    description: `Join the simulation of highly competitive civil services
-    examination in India i.e., Indian Administrative Service (IAS). The mock IAS event
-     is designed to help students prepare for the real IAS exam by providing them with 
-     a similar experience of the actual test conditions. It is typically structured to mimic 
-     the format, pressure, and content of the original exam.`,
+    description: `Join The Quill Quest and test your puzzle-solving skills! This offline competition challenges you to crack riddles, visuals, codes, and hidden clues under a time limit.Each participant gets a unique storyline, 10 minutes, and two attempts to solve the puzzle. Informal discussions are allowed, but every answer must be your own. No phones, internet, or external help permitted. In case of a tie, the fastest correct answer wins.`,
   },
 ];
 
