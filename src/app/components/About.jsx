@@ -22,7 +22,6 @@ export default function About() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/*About heading */}
           ABOUT US
         </motion.h2>
 
@@ -65,7 +64,6 @@ export default function About() {
             LEADERSHIP TEAM
           </motion.h3>
 
-          {/* Convener - always centered */}
           <div className="grid grid-cols-1 justify-items-center mb-8">
             <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
               <img
@@ -76,7 +74,7 @@ export default function About() {
               <h4 className="text-xl font-semibold text-purple-200">
                 Dr. Gesu Thakur
               </h4>
-              <p className="text-purple-300 text-sm mb-3">Convener</p>
+              <p className="text-purple-300 text-sm mb-3">H.O.D</p>
             </div>
           </div>
 
@@ -173,7 +171,7 @@ export default function About() {
 
             <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
               <img
-                src="/WhatsApp Image 2025-09-07 at 17.42.28_ac212b24.jpg"
+                src="/Shourya.jpg"
                 alt="Sponsorship Coordinator"
                 className="w-28 h-28 mx-auto rounded-full mb-4 border-2 border-purple-400 object-cover"
               />
@@ -298,6 +296,40 @@ export default function About() {
             year after year.
           </p>
         </motion.div>
+        <div className="relative w-full overflow-hidden mt-16">
+          <motion.div
+            className="flex space-x-12 text-2xl md:text-3xl font-bold text-purple-300 whitespace-nowrap"
+            animate={{ x: ["0%", "-100%"] }}
+            transition={{
+              repeat: Infinity,
+              duration: 12,
+              ease: "linear",
+            }}
+          >
+            <span className="mx-6">
+              🎉 Join us on 3rd & 4th October 2025 🎉
+            </span>
+            <span className="mx-6">
+              🎉 Join us on 3rd & 4th October 2025 🎉
+            </span>
+            <span className="mx-6">
+              🎉 Join us on 3rd & 4th October 2025 🎉
+            </span>
+            <span className="mx-6">
+              🎉 Join us on 3rd & 4th October 2025 🎉
+            </span>
+            <span className="mx-6">
+              🎉 Join us on 3rd & 4th October 2025 🎉
+            </span>
+
+            <span className="mx-6">
+              🎉 Join us on 3rd & 4th October 2025 🎉
+            </span>
+            <span className="mx-6">
+              🎉 Join us on 3rd & 4th October 2025 🎉
+            </span>
+          </motion.div>
+        </div>
       </motion.div>
     </section>
   );

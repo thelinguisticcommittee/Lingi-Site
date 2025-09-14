@@ -58,10 +58,9 @@ function TypingText({ text, speed = 40 }) {
 }
 
 export default function Sponsors() {
-  const paragraph = `We are grateful for the incredible support of our sponsors, 
-  who make this event possible. Their commitment fuels innovation, 
-  growth, and opportunities for everyone involved. Together, we aim 
-  to create a meaningful and impactful experience.`;
+  const heading = `Partner With Expressions 2k25`;
+  const paragraph = `Shhowcase your brand at one of the biggest campus fests of the year! Sponsoring Expressions 2k25 puts your name directly in front of thousands of energetic students and young professionals online and on-ground boosting visibility, engagement and goodwill.
+Your support helps us scale the fest, attract top talent and create memorable experiences while giving your brand powerful exposure and recognition.`;
 
   return (
     <section
@@ -98,8 +97,17 @@ export default function Sponsors() {
         {/* Grid Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch lg:h-[560px]">
           {/* Typing Text */}
-          <div className="h-full rounded-xl border border-purple-700/30 p-8 bg-gradient-to-br from-purple-300/10 to-purple-300/10 flex items-center justify-center">
-            <TypingText text={paragraph} speed={40} />
+
+          <div className="h-full rounded-2xl border border-purple-500/30 p-10 bg-gradient-to-br from-purple-300/10 to-pink-300/10 backdrop-blur-md shadow-xl flex flex-col items-center justify-center text-center transition transform hover:scale-[1.02] hover:shadow-purple-500/30 hover:shadow-2xl">
+            <motion.h2 className="font-extrabold text-2xl md:text-6xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-200 drop-shadow-lg tracking-tight">
+              {heading}
+            </motion.h2>
+
+            <TypingText
+              text={paragraph}
+              speed={40}
+              className="text-base md:text-lg text-purple-200/90 leading-relaxed max-w-2xl"
+            />
           </div>
 
           {/* Video Box */}
