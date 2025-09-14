@@ -27,7 +27,7 @@ export default function Navbar() {
         {/* Logo / Brand */}
         <Link href="#home" className="flex items-center space-x-2">
           <img
-            src="/lingi logo new white.png" // <-- Replace with your logo path
+            src="/lingi logo new white.png"
             alt="Logo"
             className="h-10 w-auto object-contain mask-circle"
           />
@@ -49,11 +49,11 @@ export default function Navbar() {
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+          className="md:hidden text-white focus:outline-none text-2xl"
+          onClick={() => setOpen(true)}
+          aria-label="Open menu"
         >
-          {open ? "✖" : "☰"}
+          ☰
         </button>
       </div>
 
@@ -67,6 +67,15 @@ export default function Navbar() {
             transition={{ type: "spring", stiffness: 100, damping: 15 }}
             className="absolute top-0 left-0 w-full h-screen bg-black/90 backdrop-blur-md flex flex-col items-center justify-center space-y-8 text-xl text-white md:hidden"
           >
+            {/* Close Button */}
+            <button
+              className="absolute top-6 right-6 text-3xl text-white hover:text-purple-400 transition-colors"
+              onClick={() => setOpen(false)}
+              aria-label="Close menu"
+            >
+              ✖
+            </button>
+
             {links.map((link, idx) => (
               <Link
                 key={idx}
