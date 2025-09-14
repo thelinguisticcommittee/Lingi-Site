@@ -69,7 +69,6 @@ Your support helps us scale the fest, attract top talent and create memorable ex
       id="sponsors"
       className="relative bg-gradient-to-br from-black purple-950 to-black text-white py-24 px-6 overflow-hidden"
     >
-      {/* Animated background glow */}
       <motion.div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-800/20 rounded-full blur-[180px] pointer-events-none"
         animate={{ opacity: [0.3, 0.6, 0.3] }}
@@ -82,7 +81,6 @@ Your support helps us scale the fest, attract top talent and create memorable ex
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        {/* Premium Heading */}
         <motion.h2
           className="font-extrabold text-5xl md:text-6xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-200 drop-shadow-lg"
           initial={{ opacity: 0, y: -20 }}
@@ -124,7 +122,6 @@ Your support helps us scale the fest, attract top talent and create memorable ex
           </div>
         </div>
 
-        {/* Marquee Strip */}
         <div className="mt-16 w-full overflow-hidden border-y border-purple-700/30 bg-gradient-to-r from-purple-950/40 to-purple-900/20">
           <motion.div
             className="flex gap-12 py-4"
@@ -142,7 +139,6 @@ Your support helps us scale the fest, attract top talent and create memorable ex
           </motion.div>
         </div>
 
-        {/* Contact */}
         <motion.div
           className="mt-16 bg-purple-900/20 border border-purple-900/40 rounded-xl p-8 max-w-2xl mx-auto hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105"
           initial={{ opacity: 0, y: 50 }}

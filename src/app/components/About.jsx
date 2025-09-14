@@ -269,11 +269,11 @@ export default function About() {
             is the annual inter-college literary and cultural festival organized
             by The Linguistic Committee of COER University. Celebrated every
             February, this three-day extravaganza brings together participants
-            from more than 10 colleges across Uttarakhand and beyond — including
-            Dehradun, Haridwar, Chandigarh, and Meerut.
+            from more than 50 colleges across Uttarakhand and beyond — including
+            Dehradun, Haridwar, Chandigarh, Meerut and Delhi.
           </p>
           <p>
-            With a legacy of over a decade and 10+ successful editions,
+            With a legacy of over a decade and 15+ successful editions,
             Expressions stands as a premier platform for literary brilliance,
             creative expression, and cultural exchange. Each year, the fest
             features:

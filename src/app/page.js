@@ -14,8 +14,8 @@ export default function Home() {
         <Hero />
         <About />
         <Events />
-        <Sponsors />
         <Brochure />
+        <Sponsors />
         <Contact />
       </main>
       <Footer />
