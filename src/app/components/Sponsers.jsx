@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 const sponsors = [
   { name: "ROYAL ENFIELD", logo: "/Sponsers/Royal-removebg-preview.png" },
@@ -35,13 +36,44 @@ const contacts = [
   },
 ];
 
+// Typing effect component
+function TypingText({ text, speed = 40 }) {
+  const [displayed, setDisplayed] = useState("");
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setDisplayed((prev) => prev + text.charAt(i));
+      i++;
+      if (i >= text.length) clearInterval(interval);
+    }, speed);
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  return (
+    <p className="text-lg md:text-xl font-Comfortaa leading-relaxed text-purple-100">
+      {displayed}
+    </p>
+  );
+}
+
 export default function Sponsors() {
+  const paragraph = `We are grateful for the incredible support of our sponsors, 
+  who make this event possible. Their commitment fuels innovation, 
+  growth, and opportunities for everyone involved. Together, we aim 
+  to create a meaningful and impactful experience.`;
+
   return (
     <section
       id="sponsors"
-      className="relative bg-black text-white py-20 px-6 overflow-hidden"
+      className="relative bg-gradient-to-br from-black via-purple-950 to-black text-white py-24 px-6 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-black pointer-events-none" />
+      {/* Animated background glow */}
+      <motion.div
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-purple-800/20 rounded-full blur-[180px] pointer-events-none"
+        animate={{ opacity: [0.3, 0.6, 0.3] }}
+        transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
+      />
 
       <motion.div
         className="max-w-7xl mx-auto text-center relative z-10"
@@ -49,41 +81,32 @@ export default function Sponsors() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        {/* Heading */}
+        {/* Premium Heading */}
         <motion.h2
-          className="font-bold text-4xl md:text-5xl mb-12 text-purple-400"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          className="font-extrabold text-5xl md:text-6xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-purple-200 drop-shadow-lg"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          OUR SPONSORS
+          Proudly Backed By
         </motion.h2>
+        <p className="text-purple-200/80 text-lg md:text-xl mb-16 max-w-3xl mx-auto">
+          Our sponsors empower us to bring innovation, creativity, and impact to
+          life.
+        </p>
 
         {/* Grid Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch lg:h-[560px]">
-          {/* Scrollable Logos */}
-          <div className="h-full rounded-xl border border-purple-700/30 overflow-hidden bg-gradient-to-br from-purple-300/10 to-purple-300/10">
-            <div className="h-full overflow-y-auto p-6 grid grid-cols-1 sm:grid-cols-2 gap-6 sponsor-scroll">
-              {sponsors.map((s, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center justify-center h-28 rounded-lg border border-purple-700/30 bg-purple/40 shadow-md hover:scale-[1.02] transition-transform hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl"
-                >
-                  <img
-                    src={s.logo}
-                    alt={s.name}
-                    className="max-h-full max-w-full object-contain p-3"
-                  />
-                </div>
-              ))}
-            </div>
+          {/* Typing Text */}
+          <div className="h-full rounded-xl border border-purple-700/30 p-8 bg-gradient-to-br from-purple-300/10 to-purple-300/10 flex items-center justify-center">
+            <TypingText text={paragraph} speed={40} />
           </div>
 
           {/* Video Box */}
           <div className="h-full flex items-center justify-center">
             <div className="relative h-full aspect-[9/16] max-w-[340px] w-full rounded-3xl border-[10px] border-purple-500/30 shadow-2xl overflow-hidden bg-black">
               <video
-                src="/Sponsers/site.mp4"
+                src="https://res.cloudinary.com/djti9upwy/video/upload/v1757877383/site_rl5zix.mp4"
                 autoPlay
                 loop
                 muted
@@ -96,18 +119,18 @@ export default function Sponsors() {
         </div>
 
         {/* Marquee Strip */}
-        <div className="mt-12 w-full overflow-hidden border-y border-purple-700/30 bg-gradient-to-r from-purple-950/40 to-purple-900/20">
+        <div className="mt-16 w-full overflow-hidden border-y border-purple-700/30 bg-gradient-to-r from-purple-950/40 to-purple-900/20">
           <motion.div
             className="flex gap-12 py-4"
             animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 12, ease: "linear" }}
           >
             {[...sponsors, ...sponsors].map((s, idx) => (
               <img
                 key={idx}
                 src={s.logo}
                 alt={s.name}
-                className="h-14 object-contain"
+                className="h-14 object-contain hover:scale-110 transition-transform duration-300"
               />
             ))}
           </motion.div>
@@ -130,7 +153,7 @@ export default function Sponsors() {
                 key={i}
                 className="bg-black/40 p-4 rounded-lg border border-purple-700/40 w-full sm:w-1/2"
               >
-                <p className=" text-lg text-purple-200 mb-3 font-bold hover:text-purple-600 ">
+                <p className=" text-lg text-purple-200 mb-3 font-bold hover:text-purple-600">
                   {c.name}
                 </p>
                 <div className="flex justify-center gap-6 text-3xl text-purple-400">
@@ -154,24 +177,6 @@ export default function Sponsors() {
           </div>
         </motion.div>
       </motion.div>
-
-      {/* Scrollbar Styling */}
-      <style jsx>{`
-        .sponsor-scroll::-webkit-scrollbar {
-          width: 8px;
-        }
-        .sponsor-scroll::-webkit-scrollbar-track {
-          background: rgba(128, 90, 213, 0.2);
-          border-radius: 10px;
-        }
-        .sponsor-scroll::-webkit-scrollbar-thumb {
-          background: rgba(168, 85, 247, 0.7);
-          border-radius: 10px;
-        }
-        .sponsor-scroll::-webkit-scrollbar-thumb:hover {
-          background: rgba(192, 132, 252, 1);
-        }
-      `}</style>
     </section>
   );
 }

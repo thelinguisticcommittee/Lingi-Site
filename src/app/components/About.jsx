@@ -140,7 +140,7 @@ export default function About() {
             <div></div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
             <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
               <img
                 src="/WhatsApp Image 2025-09-07 at 18.08.26_48c5c819.jpg"
@@ -220,6 +220,33 @@ export default function About() {
                 </a>
                 <a
                   href="https://www.linkedin.com/in/vandana-bhakuni-16b2ba271/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-purple-100 transition"
+                >
+                  <i className="fab fa-linkedin text-lg"></i>
+                </a>
+              </div>
+            </div>
+            <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
+              <img
+                src="/Disha-Nain.jpg"
+                alt="Fest Coordinator"
+                className="w-28 h-28 mx-auto rounded-full mb-4 border-2 border-purple-400 object-cover"
+              />
+              <h4 className="text-xl font-semibold text-purple-200">
+                Disha Nain
+              </h4>
+              <p className="text-purple-300 text-sm mb-3">Fest Coordinator</p>
+              <div className="flex justify-center space-x-4 text-purple-300">
+                <a
+                  href="mailto:dishanain971@gmail.com"
+                  className="hover:text-purple-100 transition"
+                >
+                  <i className="fas fa-envelope text-lg"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/disha-nain-6a40b825b"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-100 transition"
