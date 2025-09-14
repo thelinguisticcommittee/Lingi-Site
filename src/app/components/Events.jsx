@@ -5,8 +5,9 @@ import { useState } from "react";
 const events = [
   {
     title: "DIALECTIQUE – Debate Competition",
-    image: "/dialectique -01.jpg",
-    registerLink: "https://forms.gle/jyMpxWJexQkCvnQn8",
+    image:
+      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879313/dialectique_rectangle_wryon8.jpg",
+    registerLink: "https://forms.gle/2vqqvAwAhAL9KVh19",
     description: `Dialectique is a dynamic debate competition consisting of two rounds. 
     Teams of two members (same institution) debate in either Hindi or English. 
     Preliminary round requires video submissions; finalists compete on campus with 
@@ -14,51 +15,45 @@ const events = [
   },
   {
     title: "UNPLUGGED UNISON – Open Mic",
-    image: "/Open Mic-01.jpg",
-    registerLink: "https://forms.gle/U42d2K6uvXaxKeuW9",
+    image:
+      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879326/Untitled-1-01_muey1k.jpg",
+    registerLink: "https://forms.gle/LFMqjZGoECzdkstJA",
     description: `Unplugged Unison is an open-mic platform for poetry, music, stand-up, 
     storytelling, and more. Participants perform original content that respects all 
     sentiments. Selected entries from the preliminary video round perform live on 
     campus.`,
   },
   {
-    title: "MOOT COURT",
-    image: "/Moot Court-01.jpg",
-    registerLink: "https://forms.gle/4e764S183m7cvagf8",
-    description: ` Moot court is a simulated court proceeding where students argue cases,
+    title: "BRAIN BRAWL",
+    image:
+      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879348/BRAIN_BRAWL-01-01_o3azgj.jpg",
+    registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
+    description: `Moot court is a simulated court proceeding where students argue cases,
     often based on hypothetical legal issues or real-life cases that have already been
     decided. It allows students to practice their legal research, writing, 
      and oral advocacy skills in a courtroom setting.`,
   },
   {
-    title: "MOC IAS",
-    image: "/MOCK IAS-01.jpg",
-    registerLink: "https://forms.gle/SG2vcpNNjNeKrKQq6",
-    description: `Join the simulation of highly competive civil services
-    examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event
+    title: "MOCK IAS",
+    image:
+      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879338/Untitled-1-01_ieqrfc.jpg",
+    registerLink: "https://forms.gle/idbNwusEN7kKJSZB8",
+    description: `Join the simulation of highly competitive civil services
+    examination in India i.e., Indian Administrative Service (IAS). The mock IAS event
      is designed to help students prepare for the real IAS exam by providing them with 
      a similar experience of the actual test conditions. It is typically structured to mimic 
-     the format, pressure,and content of the original exam.`,
-  },
-  {
-    title: "FILM REVIEW ",
-    image: "/MOCK IAS-01.jpg",
-    registerLink: "https://forms.gle/wKTLYedjyU9RRge17",
-    description: `Join the simulation of highly competive civil services
-    examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event
-     is designed to help students prepare for the real IAS exam by providing them with 
-     a similar experience of the actual test conditions. It is typically structured to mimic 
-     the format, pressure,and content of the original exam.`,
+     the format, pressure, and content of the original exam.`,
   },
   {
     title: "THE QUILL QUEST",
-    image: "/Quiz-01.jpg",
-    registerLink: "https://forms.gle/d9zXrRzUVpfH8KuP8",
-    description: `Join the simulation of highly competive civil services
-    examination in india i.e., Indian Admistrative Service (IAS).The mock IAS event
+    image:
+      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879304/Quill_quest_rectangle-01_yy5wzd.jpg",
+    registerLink: "https://forms.gle/AhcPi2ePGmBdFxcp7",
+    description: `Join the simulation of highly competitive civil services
+    examination in India i.e., Indian Administrative Service (IAS). The mock IAS event
      is designed to help students prepare for the real IAS exam by providing them with 
      a similar experience of the actual test conditions. It is typically structured to mimic 
-     the format, pressure,and content of the original exam.`,
+     the format, pressure, and content of the original exam.`,
   },
 ];
 
@@ -86,14 +81,15 @@ export default function EventsSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-black pointer-events-none"></div>
 
       <motion.div
-        className="max-w-6xl mx-auto text-center relative z-10 "
+        className="max-w-6xl mx-auto text-center relative z-10"
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
+        {/* Section Heading */}
         <motion.h2
-          className="font-bold text-4xl md:text-5xl mb-12 text-purple-400"
+          className="font-bold text-4xl md:text-5xl mb-16 text-purple-400"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
@@ -101,54 +97,101 @@ export default function EventsSection() {
           OUR EVENTS
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-center">
-          {events.map((e, idx) => (
-            <motion.div
-              key={idx}
-              variants={item}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 15px 35px rgba(139, 92, 246, 0.4)",
-              }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="
-                bg-gradient-to-br from-purple-800/30 to-purple-900/10
-                border border-purple-700/30 rounded-xl
-                shadow-lg backdrop-blur-sm
-                overflow-hidden
-                flex flex-col
-              "
-            >
-              {e.image && (
-                <img
-                  src={e.image}
-                  alt={e.title}
-                  className="w-full h-60 object-cover"
-                />
-              )}
-              <div className="p-6 flex-1 flex flex-col justify-between">
-                <h3 className="text-xl font-semibold text-purple-300 mb-4">
-                  {e.title}
-                </h3>
-                <div className="flex gap-4 justify-center mt-auto">
-                  <a
-                    href={e.registerLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg bg-purple-500 hover:bg-purple-400 text-white font-medium transition"
-                  >
-                    Register
-                  </a>
-                  <button
-                    onClick={() => setSelectedEvent(e)}
-                    className="px-4 py-2 rounded-lg bg-purple-700 hover:bg-purple-600 text-white font-medium transition"
-                  >
-                    Details
-                  </button>
+        {/* Events Grid */}
+        <div className="flex flex-col gap-12 justify-center items-center">
+          {/* First Row → 2 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl w-full justify-center">
+            {events.slice(0, 2).map((e, idx) => (
+              <motion.div
+                key={idx}
+                variants={item}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 15px 35px rgba(139, 92, 246, 0.4)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="bg-gradient-to-br from-purple-800/30 to-purple-900/10
+                           border border-purple-700/30 rounded-xl shadow-lg
+                           backdrop-blur-sm overflow-hidden flex flex-col"
+              >
+                {e.image && (
+                  <img
+                    src={e.image}
+                    alt={e.title}
+                    className="w-full h-60 object-cover"
+                  />
+                )}
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <h3 className="text-xl font-semibold text-purple-300 mb-4">
+                    {e.title}
+                  </h3>
+                  <div className="flex gap-4 justify-center mt-auto">
+                    <a
+                      href={e.registerLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg bg-purple-500 hover:bg-purple-400 text-white font-medium transition"
+                    >
+                      Register
+                    </a>
+                    <button
+                      onClick={() => setSelectedEvent(e)}
+                      className="px-4 py-2 rounded-lg bg-purple-700 hover:bg-purple-600 text-white font-medium transition"
+                    >
+                      Details
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Second Row → 3 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full justify-center">
+            {events.slice(2).map((e, idx) => (
+              <motion.div
+                key={idx}
+                variants={item}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 15px 35px rgba(139, 92, 246, 0.4)",
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className="bg-gradient-to-br from-purple-800/30 to-purple-900/10
+                           border border-purple-700/30 rounded-xl shadow-lg
+                           backdrop-blur-sm overflow-hidden flex flex-col"
+              >
+                {e.image && (
+                  <img
+                    src={e.image}
+                    alt={e.title}
+                    className="w-full h-60 object-cover"
+                  />
+                )}
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <h3 className="text-xl font-semibold text-purple-300 mb-4">
+                    {e.title}
+                  </h3>
+                  <div className="flex gap-4 justify-center mt-auto">
+                    <a
+                      href={e.registerLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg bg-purple-500 hover:bg-purple-400 text-white font-medium transition"
+                    >
+                      Register
+                    </a>
+                    <button
+                      onClick={() => setSelectedEvent(e)}
+                      className="px-4 py-2 rounded-lg bg-purple-700 hover:bg-purple-600 text-white font-medium transition"
+                    >
+                      Details
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </motion.div>
 
