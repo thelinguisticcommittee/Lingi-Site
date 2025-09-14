@@ -66,7 +66,7 @@ export default function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="relative bg-gradient-to-br from-black via-purple-950 to-black text-white py-24 px-6 overflow-hidden"
+      className="relative bg-gradient-to-br from-black purple-950 to-black text-white py-24 px-6 overflow-hidden"
     >
       {/* Animated background glow */}
       <motion.div
@@ -138,7 +138,7 @@ export default function Sponsors() {
 
         {/* Contact */}
         <motion.div
-          className="mt-16 bg-purple-900/30 border border-purple-500/40 rounded-xl p-8 max-w-2xl mx-auto hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105"
+          className="mt-16 bg-purple-900/20 border border-purple-900/40 rounded-xl p-8 max-w-2xl mx-auto hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
