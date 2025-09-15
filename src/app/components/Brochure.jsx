@@ -4,35 +4,49 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function Brochure() {
+
   const pages = [
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757883101/Inter_College_Brochure_page-0001-min_zbry3e.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884063/Inter_College_Brochure_page-0005-min_kmjakr.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884065/Inter_College_Brochure_page-0006-min_humrot.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884069/Inter_College_Brochure_page-0007-min_fsdnas.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884615/Inter_College_Brochure_page-0008-min_iaztkz.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884077/Inter_College_Brochure_page-0009-min_xiuocq.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884071/Inter_College_Brochure_page-0010-min_fmzxle.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884077/Inter_College_Brochure_page-0011-min_f0lulo.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884639/Inter_College_Brochure_page-0012-min_nfbyz0.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884067/Inter_College_Brochure_page-0013-min_romi6l.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884070/Inter_College_Brochure_page-0014-min_jvemwp.jpg",
-    "https://res.cloudinary.com/dkibai6o7/image/upload/v1757884071/Inter_College_Brochure_page-0015-min_tgzsb6.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757883101/Inter_College_Brochure_page-0001-min_zbry3e.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884063/Inter_College_Brochure_page-0005-min_kmjakr.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884065/Inter_College_Brochure_page-0006-min_humrot.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884069/Inter_College_Brochure_page-0007-min_fsdnas.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884615/Inter_College_Brochure_page-0008-min_iaztkz.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884077/Inter_College_Brochure_page-0009-min_xiuocq.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884071/Inter_College_Brochure_page-0010-min_fmzxle.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884077/Inter_College_Brochure_page-0011-min_f0lulo.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884639/Inter_College_Brochure_page-0012-min_nfbyz0.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884067/Inter_College_Brochure_page-0013-min_romi6l.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884070/Inter_College_Brochure_page-0014-min_jvemwp.jpg",
+    "https://res.cloudinary.com/dkibai6o7/image/upload/f_auto,q_auto,w_1000/v1757884071/Inter_College_Brochure_page-0015-min_tgzsb6.jpg",
   ];
 
   const [dimensions, setDimensions] = useState({ width: 280, height: 400 });
+  const [loaded, setLoaded] = useState(false);
   const flipBookRef = useRef(null);
+
+  // preload all images
+  useEffect(() => {
+    let loadedCount = 0;
+    pages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === pages.length) setLoaded(true);
+      };
+    });
+  }, [pages]);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 1024) {
-        setDimensions({ width: 560, height: 780 }); // larger desktop size
+        setDimensions({ width: 560, height: 780 });
       } else if (window.innerWidth > 768) {
-        setDimensions({ width: 440, height: 600 }); // tablet size
+        setDimensions({ width: 440, height: 600 });
       } else {
-        setDimensions({ width: 280, height: 400 }); // mobile size
+        setDimensions({ width: 280, height: 400 });
       }
     };
-
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -56,42 +70,48 @@ export default function Brochure() {
           BROCHURE
         </motion.h2>
 
-        <div className="relative flex justify-center items-center">
-          <HTMLFlipBook
-            width={dimensions.width}
-            height={dimensions.height}
-            showCover
-            ref={flipBookRef}
-            className="rounded-xl shadow-2xl"
-          >
-            {pages.map((src, i) => (
-              <div
-                key={i}
-                className="bg-black flex justify-center items-center"
-              >
-                <img
-                  src={src}
-                  alt={`Brochure page ${i + 1}`}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            ))}
-          </HTMLFlipBook>
+        {!loaded ? (
+          <div className="flex items-center justify-center h-[400px] md:h-[600px]">
+            <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        ) : (
+          <div className="relative flex justify-center items-center">
+            <HTMLFlipBook
+              width={dimensions.width}
+              height={dimensions.height}
+              showCover
+              ref={flipBookRef}
+              className="rounded-xl shadow-2xl"
+            >
+              {pages.map((src, i) => (
+                <div
+                  key={i}
+                  className="bg-black flex justify-center items-center"
+                >
+                  <img
+                    src={src}
+                    alt={`Brochure page ${i + 1}`}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+            </HTMLFlipBook>
 
-          <button
-            onClick={() => flipBookRef.current?.pageFlip().flipPrev()}
-            className="absolute left-2 top-1/2 -translate-y-1/2 bg-purple-600/70 hover:bg-purple-500 text-white rounded-full p-3 shadow-md transition transform hover:scale-110"
-          >
-            ◀
-          </button>
+            <button
+              onClick={() => flipBookRef.current?.pageFlip().flipPrev()}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-purple-600/70 hover:bg-purple-500 text-white rounded-full p-3 shadow-md transition transform hover:scale-110"
+            >
+              ◀
+            </button>
 
-          <button
-            onClick={() => flipBookRef.current?.pageFlip().flipNext()}
-            className="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-600/70 hover:bg-purple-500 text-white rounded-full p-3 shadow-md transition transform hover:scale-110"
-          >
-            ▶
-          </button>
-        </div>
+            <button
+              onClick={() => flipBookRef.current?.pageFlip().flipNext()}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-purple-600/70 hover:bg-purple-500 text-white rounded-full p-3 shadow-md transition transform hover:scale-110"
+            >
+              ▶
+            </button>
+          </div>
+        )}
 
         <motion.a
           href="/Inter College Brochure.pdf"
