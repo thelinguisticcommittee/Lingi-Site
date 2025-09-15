@@ -126,16 +126,19 @@ Your support helps us scale the fest, attract top talent and create memorable ex
           <motion.div
             className="flex gap-12 py-4"
             animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+            transition={{ repeat: Infinity, duration: 7, ease: "linear" }} // shorter duration = faster
           >
-            {[...sponsors, ...sponsors].map((s, idx) => (
-              <img
-                key={idx}
-                src={s.logo}
-                alt={s.name}
-                className="h-14 object-contain hover:scale-110 transition-transform duration-300"
-              />
-            ))}
+            {Array(5)
+              .fill(sponsors)
+              .flat()
+              .map((s, idx) => (
+                <img
+                  key={idx}
+                  src={s.logo}
+                  alt={s.name}
+                  className="h-14 object-contain hover:scale-110 transition-transform duration-300"
+                />
+              ))}
           </motion.div>
         </div>
 
