@@ -29,7 +29,6 @@ export default function Contact() {
       id="contact"
       className="bg-surface text-white py-20 px-6 text-center relative overflow-hidden"
     >
-      {/* Decorative gradient background accents */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 pointer-events-none"></div>
 
       <motion.div
