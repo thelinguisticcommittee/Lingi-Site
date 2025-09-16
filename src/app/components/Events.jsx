@@ -24,7 +24,7 @@ const events = [
     campus.`,
   },
   {
-    title: "BRAIN BRAWL",
+    title: "BRAIN BRAWL - QUIZ",
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879348/BRAIN_BRAWL-01-01_o3azgj.jpg",
     registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
@@ -44,7 +44,7 @@ Think fast, score high, and claim the title of quiz champions!`,
      the format, pressure, and content of the original exam.`,
   },
   {
-    title: "THE QUILL QUEST",
+    title: "THE QUILL QUEST - ESCAPE ROOM",
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879304/Quill_quest_rectangle-01_yy5wzd.jpg",
     registerLink: "https://forms.gle/AhcPi2ePGmBdFxcp7",
