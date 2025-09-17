@@ -143,7 +143,7 @@ Your support helps us scale the fest, attract top talent and create memorable ex
         </div>
 
         <motion.div
-          className="mt-16 bg-purple-900/20 border border-purple-900/40 rounded-xl p-8 max-w-2xl mx-auto hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105"
+          className="mt-16 bg-purple-900/20 border border-purple-900/40 rounded-xl p-4 max-w-2xl mx-auto hover:text-purple-200 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -191,13 +191,15 @@ Your support helps us scale the fest, attract top talent and create memorable ex
         </motion.div>
       </motion.div>
       <motion.div
-        className="bg-gradient-to-br from-purple-800/20 to-purple-900/10 border border-purple-700/30 rounded-xl p-10 shadow-lg backdrop-blur-sm text-center justify-center"
+        className="bg-gradient-to-br from-black-800/20 to-black-900/10 border border-purple-700/30 rounded-xl p-10 shadow-lg backdrop-blur-sm text-center justify-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
+        <div></div>
+        <div></div>
         <motion.h3
-          className="text-3xl font-bold text-purple-300 mb-12 transition-transform duration-300 hover:scale-105 hover:text-purple-200"
+          className="text-3xl font-bold text-purple-300 mb-12 transition-transform duration-300 hover:scale-105 hover:text-purple-200 text-center justify-center"
           whileHover={{ scale: 1.05 }}
         >
           LEADERSHIP TEAM
@@ -216,7 +218,8 @@ Your support helps us scale the fest, attract top talent and create memorable ex
             <p className="text-purple-300 text-sm mb-3">H.O.D</p>
           </div>
         </div>
-
+        <div></div>
+        <br></br>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mb-8">
           <div></div>
           <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
