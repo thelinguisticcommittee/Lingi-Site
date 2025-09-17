@@ -89,10 +89,10 @@ export default function EventsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          OUR EVENTS
+          OUR INFORMAL EVENTS
         </motion.h2>
 
-        {/* Events Grid */}
+
         <div className="flex flex-col gap-12 justify-center items-center">
           {/* First Row → 2 Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl w-full justify-center">
@@ -234,37 +234,6 @@ export default function EventsSection() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/*<motion.a
-        href="/inFormal"
-        initial={{ opacity: 80, y: 40 }}
-        animate={{
-          opacity: 60,
-          y: 0,
-          scale: [1, 1.05, 1], // subtle pulse
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        whileHover={{
-          scale: 1.15,
-        }}
-        className="w-88 mt-12 mx-auto flex items-center justify-center gap-2
-             px-8 py-3 text-lg font-semibold
-             bg-gradient-to-r from-purple-600 to-pink-500
-             text-white rounded-full shadow-xl
-             hover:from-purple-500 hover:to-pink-400
-             transition-all"
-      >
-        <img
-          src="/COER2.jpg"
-          alt="student icon"
-          className="h-10 w-10 object-contain"
-        />
-        For COER University Students
-      </motion.a> */}
     </section>
   );
 }
