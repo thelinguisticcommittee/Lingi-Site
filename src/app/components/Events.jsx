@@ -27,8 +27,8 @@ const events = [
     sentiments. Selected entries from the preliminary video round perform live on 
     campus.`,
     date: `3rd Oct 2025`,
-    Mode: `Team`,
-    Fee: `₹599`,
+    Mode: `Individual/Team`,
+    Fee: `₹299 / ₹799 `,
     Timings: `Will updated soon`,
   },
   {
@@ -160,17 +160,17 @@ export default function EventsSection() {
                     </div>
                     <div className="bg-purple-900/20 rounded-lg p-3">
                       <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
-                        Fee
-                      </p>
-                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
-                    </div>
-                    <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
                         Timings
                       </p>
                       <p className="text-sm mt-1 text-purple-100">
                         {e.Timings}
                       </p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
                     </div>
                   </div>
 
