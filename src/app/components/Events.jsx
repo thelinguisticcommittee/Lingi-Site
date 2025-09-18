@@ -12,6 +12,10 @@ const events = [
     Teams of two members (same institution) debate in either Hindi or English. 
     Preliminary round requires video submissions; finalists compete on campus with 
     speeches and rebuttals, judged on content, clarity, and delivery.`,
+    date: `3rd Oct 2025`,
+    Mode: `Team`,
+    Fee: `₹599`,
+    Timings: `Will updated soon`,
   },
   {
     title: "UNPLUGGED UNISON – Open Mic",
@@ -22,6 +26,10 @@ const events = [
     storytelling, and more. Participants perform original content that respects all 
     sentiments. Selected entries from the preliminary video round perform live on 
     campus.`,
+    date: `3rd Oct 2025`,
+    Mode: `Team`,
+    Fee: `₹599`,
+    Timings: `Will updated soon`,
   },
   {
     title: "BRAIN BRAWL",
@@ -31,6 +39,10 @@ const events = [
     description: `Join Brain Brawl  and test your knowledge, speed, and teamwork!
 Teams of up to two members will first compete in a written screening round. The top scorers move on to an exciting panel round with rapid-fire, audio-visual, and buzzer challenges. No phones or external help allowed; answers must be within the time limit.
 Think fast, score high, and claim the title of quiz champions!`,
+    date: `3rd Oct 2025`,
+    Mode: `Team`,
+    Fee: `₹299`,
+    Timings: `Will updated soon`,
   },
   {
     title: "MOCK IAS",
@@ -42,13 +54,24 @@ Think fast, score high, and claim the title of quiz champions!`,
      is designed to help students prepare for the real IAS exam by providing them with 
      a similar experience of the actual test conditions. It is typically structured to mimic 
      the format, pressure, and content of the original exam.`,
+    date: `3rd Oct 2025`,
+    Mode: `Individual`,
+    Fee: `₹299`,
+    Timings: `Will updated soon`,
   },
   {
     title: "THE QUILL QUEST",
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879304/Quill_quest_rectangle-01_yy5wzd.jpg",
     registerLink: "https://forms.gle/AhcPi2ePGmBdFxcp7",
-    description: `Join The Quill Quest and test your puzzle-solving skills! This offline competition challenges you to crack riddles, visuals, codes, and hidden clues under a time limit.Each participant gets a unique storyline, 10 minutes, and two attempts to solve the puzzle. Informal discussions are allowed, but every answer must be your own. No phones, internet, or external help permitted. In case of a tie, the fastest correct answer wins.`,
+    description: `Join The Quill Quest and test your puzzle-solving skills! This offline competition challenges you to crack riddles, 
+    visuals, codes, and hidden clues under a time limit.Each participant gets a unique storyline, 10 minutes, and two attempts to
+     solve the puzzle. Informal discussions are allowed, but every answer must be your own. No phones, internet, or external help
+     permitted. In case of a tie, the fastest correct answer wins.`,
+    date: `3rd Oct 2025`,
+    Mode: `Individual`,
+    Fee: `₹199`,
+    Timings: `Will updated soon`,
   },
 ];
 
@@ -120,6 +143,38 @@ export default function EventsSection() {
                   <h3 className="text-xl font-semibold text-purple-300 mb-4">
                     {e.title}
                   </h3>
+
+                  {/* Event Info Grid */}
+                  <div className="grid grid-cols-2 gap-4 text-center mb-6">
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Date
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.date}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Mode
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Timings
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">
+                        {e.Timings}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
                   <div className="flex gap-4 justify-center mt-auto">
                     <a
                       href={e.registerLink}
@@ -167,6 +222,38 @@ export default function EventsSection() {
                   <h3 className="text-xl font-semibold text-purple-300 mb-4">
                     {e.title}
                   </h3>
+
+                  {/* Event Info Grid */}
+                  <div className="grid grid-cols-2 gap-4 text-center mb-6">
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Date
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.date}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Mode
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Timings
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">
+                        {e.Timings}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
                   <div className="flex gap-4 justify-center mt-auto">
                     <a
                       href={e.registerLink}
@@ -235,7 +322,7 @@ export default function EventsSection() {
         )}
       </AnimatePresence>
 
-      {/*<motion.a
+      <motion.a
         href="/inFormal"
         initial={{ opacity: 80, y: 40 }}
         animate={{
@@ -264,7 +351,7 @@ export default function EventsSection() {
           className="h-10 w-10 object-contain"
         />
         For COER University Students
-      </motion.a> */}
+      </motion.a>
     </section>
   );
 }

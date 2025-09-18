@@ -4,51 +4,34 @@ import { useState } from "react";
 
 const events = [
   {
-    title: "DIALECTIQUE – Debate Competition",
-    image:
-      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879313/dialectique_rectangle_wryon8.jpg",
+    title: "DANCE BATTLE",
+    image: "/dance battle-01.jpg",
     registerLink: "https://forms.gle/2vqqvAwAhAL9KVh19",
-    description: `Dialectique is a dynamic debate competition consisting of two rounds. 
-    Teams of two members (same institution) debate in either Hindi or English. 
-    Preliminary round requires video submissions; finalists compete on campus with 
-    speeches and rebuttals, judged on content, clarity, and delivery.`,
+    description: `An electrifying showdown where teams and solo performers bring their best moves to the stage! With high-energy music, creativity, and sheer passion, the Dance Battle is all about rhythm, expression, and setting the floor on fire while competing for the ultimate crown of the best performer.`,
+    date: `4rd Oct 2025`,
+    Mode: `Individual`,
+    Fee: `₹599`,
+    Timings: `Will updated soon`,
   },
   {
-    title: "UNPLUGGED UNISON – Open Mic",
-    image:
-      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879326/Untitled-1-01_muey1k.jpg",
+    title: "FURSAL",
+    image: "/futsal rec-01.jpg",
     registerLink: "https://forms.gle/LFMqjZGoECzdkstJA",
-    description: `Unplugged Unison is an open-mic platform for poetry, music, stand-up, 
-    storytelling, and more. Participants perform original content that respects all 
-    sentiments. Selected entries from the preliminary video round perform live on 
-    campus.`,
+    description: `A thrilling adventure filled with clues, riddles, and challenges that test wit, teamwork, and speed. Participants race against time to crack puzzles, follow trails, and outsmart their opponents in the quest to discover the hidden treasure.`,
+    date: `4rd Oct 2025`,
+    Mode: `Team`,
+    Fee: `₹599`,
+    Timings: `Will updated soon`,
   },
   {
-    title: "BRAIN BRAWL",
-    image:
-      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879348/BRAIN_BRAWL-01-01_o3azgj.jpg",
+    title: "TREASURE HUNT",
+    image: "/treasure hunt rec-01.jpg",
     registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
-    description: `Join Brain Brawl  and test your knowledge, speed, and teamwork!
-Teams of up to two members will first compete in a written screening round. The top scorers move on to an exciting panel round with rapid-fire, audio-visual, and buzzer challenges. No phones or external help allowed; answers must be within the time limit.
-Think fast, score high, and claim the title of quiz champions!`,
-  },
-  {
-    title: "MOCK IAS",
-    image:
-      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879338/Untitled-1-01_ieqrfc.jpg",
-    registerLink: "https://forms.gle/idbNwusEN7kKJSZB8",
-    description: `Join the simulation of highly competitive civil services
-    examination in India i.e., Indian Administrative Service (IAS). The mock IAS event
-     is designed to help students prepare for the real IAS exam by providing them with 
-     a similar experience of the actual test conditions. It is typically structured to mimic 
-     the format, pressure, and content of the original exam.`,
-  },
-  {
-    title: "THE QUILL QUEST",
-    image:
-      "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879304/Quill_quest_rectangle-01_yy5wzd.jpg",
-    registerLink: "https://forms.gle/AhcPi2ePGmBdFxcp7",
-    description: `Join The Quill Quest and test your puzzle-solving skills! This offline competition challenges you to crack riddles, visuals, codes, and hidden clues under a time limit.Each participant gets a unique storyline, 10 minutes, and two attempts to solve the puzzle. Informal discussions are allowed, but every answer must be your own. No phones, internet, or external help permitted. In case of a tie, the fastest correct answer wins.`,
+    description: `A thrilling adventure filled with clues, riddles, and challenges that test wit, teamwork, and speed. Participants race against time to crack puzzles, follow trails, and outsmart their opponents in the quest to discover the hidden treasure.`,
+    date: `4rd Oct 2025`,
+    Mode: `Team`,
+    Fee: `₹599`,
+    Timings: `Will updated soon`,
   },
 ];
 
@@ -89,10 +72,10 @@ export default function EventsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          OUR INFORMAL EVENTS
+          OUR EVENTS
         </motion.h2>
 
-
+        {/* Events Grid */}
         <div className="flex flex-col gap-12 justify-center items-center">
           {/* First Row → 2 Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl w-full justify-center">
@@ -120,6 +103,38 @@ export default function EventsSection() {
                   <h3 className="text-xl font-semibold text-purple-300 mb-4">
                     {e.title}
                   </h3>
+
+                  {/* Event Info Grid */}
+                  <div className="grid grid-cols-2 gap-4 text-center mb-6">
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Date
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.date}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Mode
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Timings
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">
+                        {e.Timings}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
                   <div className="flex gap-4 justify-center mt-auto">
                     <a
                       href={e.registerLink}
@@ -142,7 +157,7 @@ export default function EventsSection() {
           </div>
 
           {/* Second Row → 3 Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-10 max-w-6xl w-full justify-center">
             {events.slice(2).map((e, idx) => (
               <motion.div
                 key={idx}
@@ -167,6 +182,38 @@ export default function EventsSection() {
                   <h3 className="text-xl font-semibold text-purple-300 mb-4">
                     {e.title}
                   </h3>
+
+                  {/* Event Info Grid */}
+                  <div className="grid grid-cols-2 gap-4 text-center mb-6">
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Date
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.date}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Mode
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Timings
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">
+                        {e.Timings}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Buttons */}
                   <div className="flex gap-4 justify-center mt-auto">
                     <a
                       href={e.registerLink}
@@ -189,7 +236,6 @@ export default function EventsSection() {
           </div>
         </div>
       </motion.div>
-
       {/* Details Modal */}
       <AnimatePresence>
         {selectedEvent && (
