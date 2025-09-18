@@ -72,7 +72,7 @@ export default function EventsSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          OUR EVENTS
+          OUR INFORMAL EVENTS
         </motion.h2>
 
         {/* Events Grid */}
