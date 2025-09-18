@@ -10,6 +10,7 @@ export default function Hero() {
     "/Lingi3.jpg",
     "/Lingi4.jpg",
     "/Lingi5.jpg",
+    "/WhatsApp Image 2025-09-06 at 02.28.39_7f76da00.jpg",
   ];
   const [current, setCurrent] = useState(0);
 
