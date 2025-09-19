@@ -30,7 +30,7 @@ const events = [
     description: `A thrilling adventure filled with clues, riddles, and challenges that test wit, teamwork, and speed. Participants race against time to crack puzzles, follow trails, and outsmart their opponents in the quest to discover the hidden treasure.`,
     date: `4th Oct 2025`,
     Mode: `Team`,
-    Fee: `₹200`,
+    Fee: `₹150`,
     Timings: `Will updated soon`,
   },
 ];
