@@ -64,10 +64,12 @@ Think fast, score high, and claim the title of quiz champions!`,
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879304/Quill_quest_rectangle-01_yy5wzd.jpg",
     registerLink: "https://forms.gle/AhcPi2ePGmBdFxcp7",
-    description: `Join The Quill Quest and test your puzzle-solving skills! This offline competition challenges you to crack riddles, 
-    visuals, codes, and hidden clues under a time limit.Each participant gets a unique storyline, 10 minutes, and two attempts to
-     solve the puzzle. Informal discussions are allowed, but every answer must be your own. No phones, internet, or external help
-     permitted. In case of a tie, the fastest correct answer wins.`,
+    description: `Join the shadows of mystery with Quill Quest. This offline competition challenges
+    you to solve a murder mystery in real time! Everything you see or hear 
+    is a clue to finding out the real killer. Each participant gets to hear a 10 minute alibi 
+    of the given suspects and another 20 minutes to observe the clues hidden in different parts 
+    of the crime scene. Informal discussions, external help , use of phone or other gadgets, ChatGPT and other AI tools is NOT prohibited.
+    In case of a tie, the fastest correct answer wins..`,
     date: `3rd Oct 2025`,
     Mode: `Individual`,
     Fee: `₹199`,
