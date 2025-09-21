@@ -378,7 +378,7 @@ Your support helps us scale the fest, attract top talent and create memorable ex
             <h4 className="text-xl font-semibold text-purple-200">
               Disha Nain
             </h4>
-            <p className="text-purple-300 text-sm mb-3">Fest Coordinator</p>
+            <p className="text-purple-300 text-sm mb-3">Media Coordinator</p>
             <div className="flex justify-center space-x-4 text-purple-300">
               <a
                 href="mailto:dishanain971@gmail.com"
