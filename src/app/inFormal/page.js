@@ -6,19 +6,19 @@ const events = [
   {
     title: "DANCE BATTLE",
     image: "/dance battle-01.jpg",
-    registerLink: "https://forms.gle/2vqqvAwAhAL9KVh19",
+    registerLink: "https://forms.gle/mTznCsybrRMdDAbh7",
     description: `An electrifying showdown where teams and solo performers bring their best moves to the stage! With high-energy music, creativity, and sheer passion, the Dance Battle is all about rhythm, expression, and setting the floor on fire while competing for the ultimate crown of the best performer.`,
     date: `4th Oct 2025`,
     Mode: `Individual`,
-    Fee: `₹50`,
+    Fee: `₹80`,
     Timings: `Will be updated soon`,
   },
   {
     title: "FUTSAL",
     image: "/futsal rec-01.jpg",
-    registerLink: "https://forms.gle/LFMqjZGoECzdkstJA",
-    description: `A thrilling adventure filled with clues, riddles, and challenges that test wit, teamwork, and speed. Participants race against time to crack puzzles, follow trails, and outsmart their opponents in the quest to discover the hidden treasure.`,
-    date: `4th Oct 2025`,
+    registerLink: "https://forms.gle/uMYjPm4KuzsARoc46",
+    description: `Get ready for adrenaline-packed action! Futsal - The Ultimate 3v3 Football Challenge brings you a high-energy match where teams of 3 battle it out. With goalposts changing on every whistle and limited time on the clock, the team scoring the most goals emerges victorious.`,
+    date: `3rd Oct 2025`,
     Mode: `Team`,
     Fee: `₹150`,
     Timings: `Will be updated soon`,
@@ -26,17 +26,17 @@ const events = [
   {
     title: "TREASURE HUNT",
     image: "/treasure hunt rec-01.jpg",
-    registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
+    registerLink: "https://forms.gle/42UJPD8Gi1yavxiu6",
     description: `A thrilling adventure filled with clues, riddles, and challenges that test wit, teamwork, and speed. Participants race against time to crack puzzles, follow trails, and outsmart their opponents in the quest to discover the hidden treasure.`,
-    date: `4th Oct 2025`,
+    date: `3rd Oct 2025`,
     Mode: `Team`,
-    Fee: `₹200`,
+    Fee: `₹240`,
     Timings: `Will be updated soon`,
   },
   {
     title: "CRICTIC - FILM REVIEW",
     image: "/critic rec-01.jpg",
-    registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
+    registerLink: "https://forms.gle/bJ9JaAfhWchnTZGr5",
     description: `"Critic" is a unique and interactive movie review event 
     where a movie or selected clips will be shown on screen, and the audience
     will have to guess, analyze, and express their creativity. Participants will
@@ -46,14 +46,14 @@ const events = [
      and put their thoughts into words. It’s not just about watching a movie—it’s about
      understanding, imagining, and expressing your own perspective on it.`,
     date: `4th Oct 2025`,
-    Mode: `Team`,
-    Fee: `₹200`,
+    Mode: `Individual`,
+    Fee: `₹80`,
     Timings: `Will be updated soon`,
   },
   {
     title: "BIG FIGHT - GROUP DISCUSSION",
     image: "/big fight rec-01.jpg",
-    registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
+    registerLink: "https://forms.gle/VJ88p7P6pyyRcSKt9",
     description: `"Big Fight" is an engaging group discussion event designed to bring 
     out diverse perspectives, critical thinking, and communication skills. Participants
     will be divided into groups and given thought-provoking topics ranging from current
@@ -62,8 +62,8 @@ const events = [
      and persuade. The event not only tests knowledge and awareness but also evaluates teamwork, confidence,
       and clarity of expression, making it a true battle of ideas and intellect.`,
     date: `4th Oct 2025`,
-    Mode: `Team`,
-    Fee: `₹200`,
+    Mode: `Individual`,
+    Fee: `₹ 100`,
     Timings: `Will be updated soon`,
   },
 ];
