@@ -41,7 +41,7 @@ Teams of up to two members will first compete in a written screening round. The 
 Think fast, score high, and claim the title of quiz champions!`,
     date: `3rd Oct 2025`,
     Mode: `Team`,
-    Fee: `₹299`,
+    Fee: `₹199`,
     Timings: `Will be updated soon`,
   },
   {
