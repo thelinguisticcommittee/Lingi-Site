@@ -32,7 +32,7 @@ const events = [
     Timings: `Will updated soon`,
   },
   {
-    title: "BRAIN BRAWL",
+    title: "BRAIN BRAWL - QUIZ",
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879348/BRAIN_BRAWL-01-01_o3azgj.jpg",
     registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
@@ -60,7 +60,7 @@ Think fast, score high, and claim the title of quiz champions!`,
     Timings: `Will updated soon`,
   },
   {
-    title: "THE QUILL QUEST",
+    title: "THE QUILL QUEST - ESCAPE ROOM",
     image:
       "https://res.cloudinary.com/dkibai6o7/image/upload/v1757879304/Quill_quest_rectangle-01_yy5wzd.jpg",
     registerLink: "https://forms.gle/AhcPi2ePGmBdFxcp7",
@@ -237,12 +237,7 @@ export default function EventsSection() {
                       </p>
                       <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
                     </div>
-                    <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
-                        Fee
-                      </p>
-                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
-                    </div>
+
                     <div className="bg-purple-900/20 rounded-lg p-3">
                       <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
                         Timings
@@ -250,6 +245,12 @@ export default function EventsSection() {
                       <p className="text-sm mt-1 text-purple-100">
                         {e.Timings}
                       </p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
                     </div>
                   </div>
 

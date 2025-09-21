@@ -11,7 +11,7 @@ const events = [
     date: `4th Oct 2025`,
     Mode: `Individual`,
     Fee: `₹50`,
-    Timings: `Will updated soon`,
+    Timings: `Will be updated soon`,
   },
   {
     title: "FUTSAL",
@@ -21,7 +21,7 @@ const events = [
     date: `4th Oct 2025`,
     Mode: `Team`,
     Fee: `₹150`,
-    Timings: `Will updated soon`,
+    Timings: `Will be updated soon`,
   },
   {
     title: "TREASURE HUNT",
@@ -30,8 +30,41 @@ const events = [
     description: `A thrilling adventure filled with clues, riddles, and challenges that test wit, teamwork, and speed. Participants race against time to crack puzzles, follow trails, and outsmart their opponents in the quest to discover the hidden treasure.`,
     date: `4th Oct 2025`,
     Mode: `Team`,
-    Fee: `₹150`,
-    Timings: `Will updated soon`,
+    Fee: `₹200`,
+    Timings: `Will be updated soon`,
+  },
+  {
+    title: "CRICTIC - FILM REVIEW",
+    image: "/critic rec-01.jpg",
+    registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
+    description: `"Critic" is a unique and interactive movie review event 
+    where a movie or selected clips will be shown on screen, and the audience
+    will have to guess, analyze, and express their creativity. Participants will
+    then write a short story inspired by the movie, share their interpretation, or
+     pen down a review of what they have watched. This event blends observation with
+     imagination, encouraging participants to think critically, interpret creatively,
+     and put their thoughts into words. It’s not just about watching a movie—it’s about
+     understanding, imagining, and expressing your own perspective on it.`,
+    date: `4th Oct 2025`,
+    Mode: `Team`,
+    Fee: `₹200`,
+    Timings: `Will be updated soon`,
+  },
+  {
+    title: "BIG FIGHT - GROUP DISCUSSION",
+    image: "/big fight rec-01.jpg",
+    registerLink: "https://forms.gle/BWHFLwKgaNpBZe7k6",
+    description: `"Big Fight" is an engaging group discussion event designed to bring 
+    out diverse perspectives, critical thinking, and communication skills. Participants
+    will be divided into groups and given thought-provoking topics ranging from current
+    affairs to abstract ideas. Each team will present their arguments, counterpoints, and
+    rebuttals in a structured discussion format, showcasing their ability to analyze, articulate,
+     and persuade. The event not only tests knowledge and awareness but also evaluates teamwork, confidence,
+      and clarity of expression, making it a true battle of ideas and intellect.`,
+    date: `4th Oct 2025`,
+    Mode: `Team`,
+    Fee: `₹200`,
+    Timings: `Will be updated soon`,
   },
 ];
 
@@ -77,9 +110,8 @@ export default function EventsSection() {
 
         {/* Events Grid */}
         <div className="flex flex-col gap-12 justify-center items-center">
-          {/* First Row → 2 Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl w-full justify-center">
-            {events.slice(0, 2).map((e, idx) => (
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-10 max-w-6xl w-full justify-center">
+            {events.slice(0, 3).map((e, idx) => (
               <motion.div
                 key={idx}
                 variants={item}
@@ -89,8 +121,8 @@ export default function EventsSection() {
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 className="bg-gradient-to-br from-purple-800/30 to-purple-900/10
-                           border border-purple-700/30 rounded-xl shadow-lg
-                           backdrop-blur-sm overflow-hidden flex flex-col"
+                 border border-purple-700/30 rounded-xl shadow-lg
+                 backdrop-blur-sm overflow-hidden flex flex-col"
               >
                 {e.image && (
                   <img
@@ -107,30 +139,31 @@ export default function EventsSection() {
                   {/* Event Info Grid */}
                   <div className="grid grid-cols-2 gap-4 text-center mb-6">
                     <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                      <p className=" text-xs uppercase tracking-wide text-purple-400 font-bold">
                         Date
                       </p>
                       <p className="text-sm mt-1 text-purple-100">{e.date}</p>
                     </div>
                     <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-bold">
                         Mode
                       </p>
                       <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
                     </div>
+
                     <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
-                        Fee
-                      </p>
-                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
-                    </div>
-                    <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-bold">
                         Timings
                       </p>
                       <p className="text-sm mt-1 text-purple-100">
                         {e.Timings}
                       </p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-bold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
                     </div>
                   </div>
 
@@ -155,9 +188,7 @@ export default function EventsSection() {
               </motion.div>
             ))}
           </div>
-
-          {/* Second Row → 3 Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-10 max-w-6xl w-full justify-center">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-10 max-w-6xl w-full justify-center">
             {events.slice(2).map((e, idx) => (
               <motion.div
                 key={idx}
@@ -186,30 +217,30 @@ export default function EventsSection() {
                   {/* Event Info Grid */}
                   <div className="grid grid-cols-2 gap-4 text-center mb-6">
                     <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-bold">
                         Date
                       </p>
                       <p className="text-sm mt-1 text-purple-100">{e.date}</p>
                     </div>
                     <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-bold">
                         Mode
                       </p>
                       <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
                     </div>
                     <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
-                        Fee
-                      </p>
-                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
-                    </div>
-                    <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-bold">
                         Timings
                       </p>
                       <p className="text-sm mt-1 text-purple-100">
                         {e.Timings}
                       </p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-bold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
                     </div>
                   </div>
 
