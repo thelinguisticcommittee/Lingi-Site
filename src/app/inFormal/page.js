@@ -14,6 +14,16 @@ const events = [
     Timings: `Will be updated soon`,
   },
   {
+    title: "Moot Court",
+    image: "/futsal rec-01.jpg",
+    registerLink: "https://forms.gle/HAxfAmjSuT5W96Qq9",
+    description: ` Step into the courtroom! Moot Court - Argumentative Arena challenges participants to showcase their legal reasoning and persuasive speaking. Given a case scenario, each participant must argue both for and against it within the allotted time.`,
+    date: `4th Oct 2025`,
+    Mode: `Individual`,
+    Fee: `₹100`,
+    Timings: `Will be updated soon`,
+  },
+  {
     title: "FUTSAL",
     image: "/futsal rec-01.jpg",
     registerLink: "https://forms.gle/uMYjPm4KuzsARoc46",
