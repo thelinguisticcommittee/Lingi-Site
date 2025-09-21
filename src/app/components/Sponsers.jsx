@@ -216,7 +216,7 @@ Your support helps us scale the fest, attract top talent and create memorable ex
               Mr. Rakesh Marqus
             </h4>
             <p className="text-purple-300 text-sm mb-3">Convener</p>
-            <p className="text-purple-300 text-sm mb-3">The Linguitic Committee</p>
+            <p className="text-purple-300 text-sm mb-3">The Linguistic Committee</p>
           </div>
         </div>
         <div></div>
@@ -372,7 +372,7 @@ Your support helps us scale the fest, attract top talent and create memorable ex
           <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
             <img
               src="/Disha-Nain.jpg"
-              alt="Fest Coordinator"
+              alt="Media Coordinator"
               className="w-28 h-28 mx-auto rounded-full mb-4 border-2 border-purple-400 object-cover"
             />
             <h4 className="text-xl font-semibold text-purple-200">
