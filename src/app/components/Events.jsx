@@ -237,12 +237,7 @@ export default function EventsSection() {
                       </p>
                       <p className="text-sm mt-1 text-purple-100">{e.Mode}</p>
                     </div>
-                    <div className="bg-purple-900/20 rounded-lg p-3">
-                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
-                        Fee
-                      </p>
-                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
-                    </div>
+
                     <div className="bg-purple-900/20 rounded-lg p-3">
                       <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
                         Timings
@@ -250,6 +245,12 @@ export default function EventsSection() {
                       <p className="text-sm mt-1 text-purple-100">
                         {e.Timings}
                       </p>
+                    </div>
+                    <div className="bg-purple-900/20 rounded-lg p-3">
+                      <p className="text-xs uppercase tracking-wide text-purple-400 font-semibold">
+                        Fee
+                      </p>
+                      <p className="text-sm mt-1 text-purple-100">{e.Fee}</p>
                     </div>
                   </div>
 
