@@ -15,7 +15,7 @@ const events = [
   },
   {
     title: "Moot Court",
-    image: "/futsal rec-01.jpg",
+    image: "/moot_court.jpg",
     registerLink: "https://forms.gle/HAxfAmjSuT5W96Qq9",
     description: `Step into the courtroom! Moot Court - Argumentative Arena challenges participants to showcase their legal reasoning and persuasive speaking. Given a case scenario, each participant must argue both for and against it within the allotted time.`,
     date: `4th Oct 2025`,
