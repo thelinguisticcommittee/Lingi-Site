@@ -198,7 +198,7 @@ export default function EventsSection() {
             ))}
           </div>
 
-          {/* Second Row → 3 Cards */}
+   
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl w-full justify-center">
             {events.slice(2).map((e, idx) => (
               <motion.div
