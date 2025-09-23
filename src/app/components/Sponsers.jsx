@@ -208,7 +208,7 @@ Your support helps us scale the fest, attract top talent and create memorable ex
         <div className="grid grid-cols-1 justify-items-center mb-8">
           <div className="bg-black/40 border border-purple-700/30 rounded-xl p-6 hover:shadow-purple-500/20 hover:shadow-xl transition transform hover:scale-105 max-w-xs w-full">
             <img
-              src="/rakesh sir .jpg"
+              src="/rakesh_02.jpg"
               alt="Convener"
               className="w-28 h-28 mx-auto rounded-full mb-4 border-2 border-purple-400 object-cover"
             />
