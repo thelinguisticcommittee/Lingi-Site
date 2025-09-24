@@ -116,6 +116,40 @@ export default function EventsSection() {
         >
           OUR EVENTS
         </motion.h2>
+                <motion.p
+          className="text-3xl md:text-4xl font-extrabold mb-16 
+             bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500
+             bg-clip-text text-transparent 
+             drop-shadow-[0_0_10px_rgba(255,200,0,1)]
+             shadow-[0_0_25px_rgba(255,120,0,0.8)]
+             animate-[flicker_1.5s_infinite]"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          💰 PRIZEPOOL UPTO ₹25,000
+        </motion.p>
+
+        <style jsx global>{`
+          @keyframes flicker {
+            0%,
+            18%,
+            22%,
+            25%,
+            53%,
+            57% {
+              opacity: 1;
+              text-shadow: 0 0 5px #fff, 0 0 10px #ff9900, 0 0 20px #ff6600,
+                0 0 40px #ff3300;
+            }
+            20%,
+            24%,
+            55% {
+              opacity: 0.6;
+              text-shadow: none;
+            }
+          }
+        `}</style>
 
         {/* Events Grid */}
         <div className="flex flex-col gap-12 justify-center items-center">
