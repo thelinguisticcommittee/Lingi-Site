@@ -33,7 +33,7 @@ const contacts = [
   {
     name: "Pradhumay Gaur",
     linkedin: "https://www.linkedin.com/in/pradhumay-gaur/",
-    email: "mailto:pradhumay@example.com",
+    email: "mailto:pradhumaygaur@myyahoo.com",
     phone: "+919760704988",
   },
 ];
