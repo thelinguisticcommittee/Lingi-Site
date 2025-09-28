@@ -127,7 +127,7 @@ export default function EventsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          💰 PRIZEPOOL UPTO ₹25,000
+          💰 PRIZEPOOL UPTO ₹50,000
         </motion.p>
 
         <style jsx global>{`
