@@ -56,7 +56,7 @@ Think fast, score high, and claim the title of quiz champions!`,
      the format, pressure, and content of the original exam.`,
     date: `3rd Oct 2025`,
     Mode: `Individual`,
-    Fee: `₹299`,
+    Fee: `₹199`,
     Timings: `Will be updated soon`,
   },
   {
