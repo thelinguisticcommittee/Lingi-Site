@@ -11,7 +11,7 @@ const events = [
     date: `4th Oct 2025`,
     Mode: `Individual`,
     Fee: `₹80`,
-    Timings: `Will be updated soon`,
+    Timings: `3:00 PM onwards`,
   },
   {
     title: "Moot Court",
@@ -21,7 +21,7 @@ const events = [
     date: `4th Oct 2025`,
     Mode: `Individual`,
     Fee: `₹100`,
-    Timings: `Will be updated soon`,
+    Timings: `11:00 AM onwards`,
   },
   {
     title: "FUTSAL",
@@ -31,7 +31,7 @@ const events = [
     date: `3rd Oct 2025`,
     Mode: `Team`,
     Fee: `₹150`,
-    Timings: `Will be updated soon`,
+    Timings: `12:00 PM onwards`,
   },
   {
     title: "TREASURE HUNT",
@@ -41,7 +41,7 @@ const events = [
     date: `3rd Oct 2025`,
     Mode: `Team`,
     Fee: `₹240`,
-    Timings: `Will be updated soon`,
+    Timings: `12:00 PM onwards`,
   },
   {
     title: "CRICTIC - FILM REVIEW",
@@ -51,7 +51,7 @@ const events = [
     date: `4th Oct 2025`,
     Mode: `Individual`,
     Fee: `₹80`,
-    Timings: `Will be updated soon`,
+    Timings: `11:00 AM onwards`,
   },
   {
     title: "BIG FIGHT - GROUP DISCUSSION",
@@ -61,7 +61,7 @@ const events = [
     date: `4th Oct 2025`,
     Mode: `Individual`,
     Fee: `₹100`,
-    Timings: `Will be updated soon`,
+    Timings: `12:00 PM onwards`,
   },
 ];
 
