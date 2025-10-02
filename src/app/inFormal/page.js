@@ -61,7 +61,7 @@ const events = [
     date: `4th Oct 2025`,
     Mode: `Individual`,
     Fee: `₹100`,
-    Timings: `12:00 PM onwards`,
+    Timings: `10:00 AM onwards`,
   },
 ];
 
